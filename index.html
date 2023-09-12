@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Webpack: Widget Factory</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script defer src="bundle.js"></script><link href="styles.css" rel="stylesheet"></head>
+<body>
+    <div class="sidebar">
+        <h2>Widget List</h2>
+        <ul id="widget-list">
+            <!-- List of widget names goes here -->
+            <li><a href="#accordian">accordian</a></li>
+            <li><a href="#alert">alert</a></li>
+            <li><a href="#badge">badge</a></li>
+            <li><a href="#breadcrumb">breadcrumb</a></li>
+            <li><a href="#button">button</a></li>
+            <li><a href="#card">card</a></li>
+            <li><a href="#carousel">carousel</a></li>
+            <li><a href="#close">close</a></li>
+            <li><a href="#collapse">collapse</a></li>
+            <li><a href="#dropdown">dropdown</a></li>
+			<li><a href="#modal-widget">Modal</a></li>
+			<li><a href="#navbar">Navbar</a></li>
+			<li><a href="#offcanvas-widget">Offcanvas Widget</a></li>
+			<li><a href="#popover-widget">Popover Widget</a></li>
+			<li><a href="#progress-bar-widget">Progress Bar</a></li>
+			<li><a href="#scrollspy-widget">Scrollspy widget</a></li>
+			<li><a href="#spinner">Spinner</a></li>
+			<li><a href="#tabs">Tabs</a></li>
+			<li><a href="#tooltip">Tooltip</a></li>
+			
+            <!-- Add more widget links as needed -->
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="accordian" class="widget">
+            <h1>Accordian</h1>
+            <div class="example">
+                <div id="my-accordian"></div>
+            </div>
+
+        </div>
+
+        <div id="alert" class="widget">
+            <h1>Alert</h1>
+            <div class="example">
+                <div class="custom-alert1" data-type="success">Success Alert</div>
+				<div class="custom-alert2" data-type="primary">Primary Alert</div>
+				<div class="custom-alert3" data-type="warning">Warning Alert</div>
+            </div>
+        </div>
+        <div id="badge" class="widget">
+            <h1>Badge</h1>
+            <div class="example">
+                <h1>Heading 1 <span class="badge bg-primary">New</span></h1>
+                <h2>Heading 2 <span class="badge bg-secondary">New</span></h2>
+                <h3>Heading 3 <span class="badge bg-green">New</span></h3>
+                <h4>Heading 4 <span class="badge bg-yellow">New</span></h4>
+                <h5>Heading 5 <span class="badge bg-cyan">New</span></h5>
+                <h6>Heading 6 <span class="badge bg-orange">New</span></h6>
+                <p>Paragraph <span class="badge bg-secondary">New</span></p>
+            </div>
+        </div>
+        <div id="breadcrumb" class="widget">
+            <h1>Breadcrumb</h1>
+            <div class="example">
+                <div class="custom-breadcrumb">
+                    Home
+                </div>
+                  
+                <div class="custom-breadcrumb">
+                    <a href="">Home</a> Library
+                </div>
+                      
+                <div class="custom-breadcrumb">
+                    <a href="">Home</a> <a href="">Library</a> <a href="" class="current">Data</a>
+                </div>
+            </div>
+        </div>
+        <div id="button" class="widget">
+            <h1>Button</h1>
+            <div class="example">
+                <h3>Primary Button</h3>
+                <button type="button" class="btn wf-btn-primary">Primary</button>
+                <button type="button" class="btn wf-btn-secondary">Secondary</button>
+                <button type="button" class="btn wf-btn-success">Success</button>
+                <button type="button" class="btn wf-btn-danger">Danger</button>
+                <button type="button" class="btn wf-btn-warning">Warning</button>
+                <button type="button" class="btn wf-btn-info">Info</button>
+                <button type="button" class="btn wf-btn-light">Light</button>
+                <button type="button" class="btn wf-btn-dark">Dark</button>   
+                <button type="button" class="btn wf-btn-link">Link</button>
+                
+                <h3>Secondary Button</h3>
+                <button type="button" class="btn wf-btn-outline-primary">Primary</button>
+                <button type="button" class="btn wf-btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn wf-btn-outline-success">Success</button>
+                <button type="button" class="btn wf-btn-outline-danger">Danger</button>
+                <button type="button" class="btn wf-btn-outline-warning">Warning</button>
+                <button type="button" class="btn wf-btn-outline-info">Info</button>
+                <button type="button" class="btn wf-btn-outline-light">Light</button>
+                <button type="button" class="btn wf-btn-outline-dark">Dark</button>
+            </div>
+        </div>
+        <div id="card" class="widget">
+            <h1>Card</h1>
+            <div class="example">
+                <div class="wf-card"></div>
+            </div>
+        </div>
+        <div id="carousel" class="widget">
+            <h1>Carousel</h1>
+            <div class="example">
+                <div class="carousel">
+                    <div><img src="https://picsum.photos/300/200?random=1"></div>
+                    <div><img src="https://picsum.photos/300/200?random=2"></div>
+                    <div><img src="https://picsum.photos/300/200?random=3"></div>
+                    <div><img src="https://picsum.photos/300/200?random=4"></div>
+                    <div><img src="https://picsum.photos/300/200?random=5"></div>
+                    <div><img src="https://picsum.photos/300/200?random=6"></div>
+                </div>
+            </div>
+        </div>
+        <div id="close" class="widget">
+            <h1>Close</h1>
+            <div class="example">
+                <div>
+                    <div class="customClose1 alert-success">
+                        Success! This alert box indicates a successful or positive action.
+                    </div>
+                    <p class="customClose2 alert-info">Info! This alert box indicates a neutral informative change or action.</p>
+                </div>
+            </div>
+        </div>
+        <div id="collapse" class="widget">
+            <h1>Collapse</h1>
+            <div class="example">
+                <div>
+                    <div id="customShowMoreLess1">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </div>
+                    <div>
+                        <p id="customShowMoreLess2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dropdown" class="widget">
+            <h1>Dropdown</h1>
+            <div class="example ">
+                <div class="wf-wrapper">
+                    <div class="wf-dropdown">
+                      <button class="dropdown-button dropdown-toggle" aria-haspopup="true" aria-expanded="false">Select an option</button>
+                      <div class="dropdown-content dropdown-menu" role="menu" aria-labelledby="dropdown-toggle"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <!-- modal start -->
+		<div id="modal-widget" class="widget">
+            <h1>Modal</h1>
+            <div class="example modal-c">
+                <div class="modal-main-wrap">
+					<div class="modal-wrap">
+					  <!-- Button to trigger the modal -->
+					  <button id="modalBtn">Open Modal</button>
+				 
+					  <!-- Modal content -->
+					  <div id="modal" style="display: none;">
+						<div class="modal-header">
+						  <h2 class="modal-title"></h2>
+						</div>  
+						<div class="modal-content">
+						  <p></p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+            </div>
+        </div>
+		<!-- modal ends -->
+
+		<!-- navbar start -->
+
+		<div id="navbar" class="widget">
+            <h1>Navbar</h1>
+            <div class="example">
+                <nav class="custom-navbar">
+					<a class="navbar-brand" >Navbar</a>
+					<button class="navbar-toggler" type="button">
+						<span class="navbar-toggler-icon">
+							<svg class="icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+								<line x1="6" y1="12" x2="18" y2="12" stroke="#000000" stroke-width="2" />
+								<line x1="6" y1="16" x2="18" y2="16" stroke="#000000" stroke-width="2" />
+								<line x1="6" y1="20" x2="18" y2="20" stroke="#000000" stroke-width="2" />
+							</svg>
+						</span>
+					</button>
+					 
+					<div class="navbar-collapse">
+						<ul class="navbar-nav">
+						<li class="active">
+							<a >Home</a>
+						</li>
+						<li>
+							<a >Features</a>
+						</li>
+						<li>
+							<a >Pricing</a>
+						</li>
+						<li>
+							<a >About</a>
+						</li>
+						</ul>
+						 
+						<div class="search-form">
+						<input class="input-search" type="search" placeholder="Search" />
+						<button class="btn-submit" type="submit">Search</button>
+						</div>
+					</div>
+				</nav>
+            </div>
+        </div>
+
+		<!-- navbar ends -->
+
+		<!-- offcanvas starts here -->
+		<div id="offcanvas-widget" class="widget">
+            <h1>Offcanvas</h1>
+            <div class="example">
+                <button id="openBtn">Open</button>
+				<div id="offcanvas">
+					<button tabindex="0" id="closeBtn">Close</button>
+					<div class="offcanvas-content">
+						<h2>Off canvas content</h2>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, adipisci.</p>
+					</div>
+				</div>					
+            </div>
+        </div>
+		<!-- offcanvas ends here -->
+
+		<!-- popover ends here -->
+		<div id="popover-widget" class="widget">
+            <h1>Popover</h1>
+            <div class="example">
+                <div class="wf-popover">
+					<button class="popoverButton">Click Me</button>
+					<div class="popoverContent popover">
+					  <p>This is a popover!</p>
+					</div>
+				</div>					
+            </div>
+        </div>
+		<!-- popover ends here -->
+
+		<!-- progress-bar starts -->
+		<div id="progress-bar-widget" class="widget">
+            <h1>Progress Bar</h1>
+            <div class="example">
+				<div id="progress-bar"></div>				
+            </div>
+        </div>
+		<!-- progress-bar ends -->
+
+		<!-- scrollspy starts -->
+		<div id="scrollspy-widget" class="widget">
+            <h1>Scrollspy</h1>
+            <div class="example example-scrollspy">
+				<nav>
+					<ul>
+					  <li><a href="#section1">Section 1</a></li>
+					  <li><a href="#section2">Section 2</a></li>
+					  <li><a href="#section3">Section 3</a></li>
+					</ul>
+				  </nav>
+				  <div class="pages">
+					<section id="section1">
+						<h2>Section 1</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					  </section>
+					   
+					  <section id="section2">
+						<h2>Section 2</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					  </section>
+					   
+					  <section id="section3">
+						<h2>Section 3</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
+					  </section>	
+				  </div>		
+            </div>
+        </div>
+		<!-- scrollspy ends -->
+
+		<!-- spinner starts -->
+		<div id="spinner" class="widget">
+            <h1>spinner</h1>
+            <div class="example">
+				<div id="spinner-widget"></div>
+            </div>
+        </div>
+		<!-- spinner ends -->
+
+		<!-- Tabs starts -->
+		<div id="tabs" class="widget">
+            <h1>Tabs</h1>
+            <div class="example">
+				<div class="customTabs">
+					<ul class="tab-head">
+						<li><a href="#tab1">Tab One</a></li>
+						<li><a href="#tab2">Tab Two</a></li>
+						<li><a href="#tab3">Tab Three</a></li>
+						<li><a href="#tab4">Tab Four</a></li>
+						<li><a href="#tab5">Tab Five</a></li>
+						<li><a href="#tab6">Tab Six</a></li>
+					</ul>
+					<div class="tab-body">
+						<div id="tab1">
+							<div>
+								<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+								<button type="button" class="btn">Primary Button</button>
+								<a  class="link">Primary link</a>
+							</div>
+						</div>
+						<div id="tab2">
+							<div>
+								<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+							</div>
+						</div>
+						<div id="tab3">
+							<div>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+							</div>
+						</div>
+						<div id="tab4">
+							<div>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+							</div>
+						</div>
+						<div id="tab5">
+							<div>
+								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure</p>
+							</div>
+						</div>
+						<div id="tab6">
+							<div>
+								<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
+							</div>
+						</div>
+					</div>
+				</div>				
+            </div>
+        </div>
+		<!-- Tabs ends -->
+
+		<!-- tooltip starts -->
+		<div id="tooltip" class="widget">
+            <h1>Tooltip</h1>
+            <div class="example">
+				<div class="my-tooltip">hello</div>
+			</div>
+		</div>
+		<!-- tooltip ends -->
+
+    </div>
+	<script src="./bundle.js"></script>
+
+</body>
+
+</html>
