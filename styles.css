@@ -382,6 +382,9 @@ button.modal-close-btn:after {
 .wf-carousel .slick-next:before, .wf-carousel .slick-prev:before {
   color: black !important;
 }
+.wf-carousel .slick-dots li button::before {
+  color: black !important;
+}
 
 .wf-wrapper .wf-dropdown {
   position: relative;
@@ -614,6 +617,59 @@ button.modal-close-btn:after {
   stroke-linecap: round;
   stroke-linejoin: round;
   cursor: pointer;
+}
+
+.wf-navbar .dropdown {
+  position: relative;
+}
+
+.wf-navbar .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.wf-navbar .caret {
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0;
+}
+
+.wf-navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #343a40;
+  min-width: 160px;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wf-navbar .dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.wf-navbar .dropdown-menu li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: #007bff;
+}
+
+/* Show dropdown menu on hover */
+.wf-navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Adjust dropdown position */
+.wf-navbar .dropdown-menu {
+  top: 100%;
+  left: 0;
 }
 
 @media (max-width: 768px) {
@@ -1030,19 +1086,31 @@ body, h1, h2, p, ul, li, pre {
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  display: flex;
   box-sizing: border-box;
+}
+
+.wrapperrrr {
+  display: flex;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .sidebar {
   background-color: #333;
   color: #fff;
   padding: 20px;
-  width: 250px;
+  width: 300px;
   position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 999;
+}
+
+.content {
+  margin-left: 340px;
+  padding: 20px;
+  width: calc(100% - 340px);
 }
 
 .sidebar h2 {
@@ -1064,12 +1132,6 @@ body {
   color: #fff;
   text-transform: capitalize;
   font-weight: bold;
-}
-
-.content {
-  margin-left: 270px; /* Adjust this value to fit your sidebar width */
-  padding: 20px;
-  width: calc(100% - 250px);
 }
 
 .widget {
@@ -1134,4 +1196,8 @@ code {
 .example-scrollspy .pages {
   width: 70%;
   padding: 10px;
+}
+
+#carousel .example {
+  height: 267px;
 }
