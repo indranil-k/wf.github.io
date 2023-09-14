@@ -1107,6 +1107,10 @@ body {
   z-index: 999;
 }
 
+.sidebar li:last-child {
+  margin-bottom: 100px !important;
+}
+
 .content {
   margin-left: 340px;
   padding: 20px;
@@ -1172,6 +1176,10 @@ pre {
 
 code {
   font-family: Consolas, monospace;
+}
+
+.modal-c {
+  position: relative;
 }
 
 .example-scrollspy {
