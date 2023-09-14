@@ -849,13 +849,16 @@ button.modal-close-btn:after {
   visibility: hidden;
 }
 
-.wf-collapse .customShowMoreLess {
+.wf-collapse.customShowMoreLess {
   display: block;
   padding: 10px;
+  margin-bottom: 5px;
 }
+
 .wf-collapse #show-more, .wf-collapse #show-less {
   display: inline-block;
   margin-left: 5px;
+  text-decoration: none;
 }
 
 .wf-tabs {
